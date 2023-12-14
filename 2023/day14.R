@@ -11,7 +11,7 @@ m
 
 res <- c()
 for (j in 1:ncol(m)){
-  hs <- c(0, which(m[, j] == "#"), 11)
+  hs <- c(0, which(m[, j] == "#", nrow(m) + 1)
   os <- which(m[, j] == "O")
   for (i in 1:(length(hs)-1)){
     if (length(os[os > hs[i] & os < hs[i+1]]) > 0){res <- c(res, (hs[i]+1):(hs[i] + length(os[os > hs[i] & os < hs[i+1]])))}
