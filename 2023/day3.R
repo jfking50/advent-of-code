@@ -64,7 +64,6 @@ for (i in 1:nrow(df2)){ # loop through dataframe of numbers and indices
 }
 
 df2 %>% filter(keep) %>% summarize(s = sum(nums))
-# 533769 too low
-# 534744 too low
 
+# part 2
 
