@@ -143,4 +143,4 @@ res <- data.frame(
 
 res %>% 
   left_join(g, by = c("f"="from", "t"="to")) %>%
-  summarize(s=sum(d))
+  summarize(s=sum(d)) - 1 
